@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, FlatList, TouchableOpacity, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { styles } from '../components/Style';
-import Links from "../components/Links";
+// import Links from "../components/Links";
 
 const JournalMenu = ({navigation}) => {
-    const userType = useSelector(state => state.auth.userType);
+    // const userType = useSelector(state => state.auth.userType);
 
     const menu = [
         {name: 'Объявления', icon: 'mail-outline', type: [1, 2]},
@@ -32,9 +32,9 @@ const JournalMenu = ({navigation}) => {
     );
 
     const renderItem = ({item}) => {
-        if (item.type.includes(userType)) {
+        // if (item.type.includes(userType)) {
             return <Item name={item.name} icon={item.icon} />
-        }
+        // }
     };
 
     return (
@@ -45,7 +45,7 @@ const JournalMenu = ({navigation}) => {
                 renderItem={renderItem}
                 keyExtractor={item => item.name}
             />
-            <Links col='#000' navigation={navigation} />
+            {/* <Links col='#000' navigation={navigation} /> */}
         </SafeAreaView>
     );
 };

@@ -7,11 +7,14 @@
  */
 
 import React from 'react';
-import { Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { JournalNavigator } from './navigation/JournalNavigator';
 
 const App = () => {
   return(
-    <Text>JOURNAL</Text>
+    <NavigationContainer>
+      <JournalNavigator />
+    </NavigationContainer>
   );
 };
 
