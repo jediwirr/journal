@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import JournalMenu from '../screens/JournalMenu';
-import JournalLessons from '../screens/JournalLessons';
 import Replacements from '../screens/Replacements';
 import Report from '../screens/Report';
 import JournalTimetable from '../screens/JournalTimetable';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { LessonNavigator } from './LessonNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +37,7 @@ export const JournalNavigator = () => (
         })}
     >
         <Tab.Screen name="Меню" component={JournalMenu} />
-        <Tab.Screen name="Уроки" component={JournalLessons} />
+        <Tab.Screen name="Уроки" component={LessonNavigator} />
         <Tab.Screen name="Замещения" component={Replacements} />
         <Tab.Screen name="Отчёт" component={Report} />
         <Tab.Screen name="Расписание" component={JournalTimetable} />
