@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 export const JournalNavigator = () => (
     <Tab.Navigator
         screenOptions={({ route }) => ({
+            headerShown: false,
             tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
@@ -19,7 +20,7 @@ export const JournalNavigator = () => (
                 iconName = focused
                 ? 'home'
                 : 'home-outline';
-            } else if (route.name === 'Уроки') {
+            } else if (route.name === 'Lessons') {
                 iconName = focused ? 'list' : 'list-outline';
             } else if (route.name === 'Замещения') {
                 iconName = focused ? 'repeat' : 'repeat-outline';
@@ -37,7 +38,7 @@ export const JournalNavigator = () => (
         })}
     >
         <Tab.Screen name="Меню" component={JournalMenu} />
-        <Tab.Screen name="Уроки" component={LessonNavigator} />
+        <Tab.Screen name="Lessons" component={LessonNavigator} />
         <Tab.Screen name="Замещения" component={Replacements} />
         <Tab.Screen name="Отчёт" component={Report} />
         <Tab.Screen name="Расписание" component={JournalTimetable} />
