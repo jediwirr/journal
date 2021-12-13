@@ -6,7 +6,7 @@ class JournalButton extends Component {
         super(props);
         title = this.props.title;
         onPress = this.props.onPress;
-    }
+    };
 
     render() {
         return(
